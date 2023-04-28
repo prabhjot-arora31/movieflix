@@ -3,7 +3,7 @@ const API_KEY = "fafef439971c0bedf1c12e7a5be971c2";
 const api =
   "https://api.themoviedb.org/3/movie/popular/?api_key=fafef439971c0bedf1c12e7a5be971c2";
 var container;
-var res = fetch(api)
+var res = fetch("https://api.themoviedb.org/3/movie/popular/?api_key=fafef439971c0bedf1c12e7a5be971c2")
   .then((res1) => res1.json())
   .then((data1) => {
     var data2 = data1.results;
