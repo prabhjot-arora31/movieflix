@@ -18,12 +18,14 @@ var res = fetch("https://api.themoviedb.org/3/movie/popular/?api_key=fafef439971
       var name = document.createElement("h1");
       var release_date = document.createElement("h5");
       container = document.createElement("div");
+      // main things
+      main.style.marginTop: "1.2rem";
       //   var adult = document.createElement("h5");
       var img = document.createElement("img");
       var btn = document.createElement("button");
       var a = document.createElement("a");
       //   container styling
-      container.style.marginTop="6rem";
+      //container.style.marginTop="6rem";
       container.style.border = "1px solid white";
       container.style.padding = "1.3rem";
       container.style.margin = "0.6rem";
