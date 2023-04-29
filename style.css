@@ -36,13 +36,6 @@ button:hover{
     justify-content: space-evenly;
     align-items: center;
 }
-.header:hover{
-    background-color: white;
-    color: black;
-    .movie{
-        color: black;
-    }
-}
 .head_about{
     padding: 0.6rem;
     padding-left: 0.9rem;
