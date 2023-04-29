@@ -27,6 +27,7 @@ color: red;
     background-color:red;
     display: flex;
     width:100%;
+    z-index:1;
     position: fixed;
     justify-content: space-evenly;
     align-items: center;
