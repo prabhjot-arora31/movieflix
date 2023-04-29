@@ -24,18 +24,31 @@ var res = fetch(
       var name = document.createElement("h1");
       var release_date = document.createElement("h5");
       var hidDiv = document.createElement("div");
+      var img = document.createElement("img");
+      var btn = document.createElement("button");
+      var ratingButton = document.createElement("button");
+      var flexDiv = document.createElement("div");
+      var a = document.createElement("a");
+      // flexDiv property
+      flexDiv.style.display = "flex";
+      flexDiv.style.justifyContent = "space-between";
+      flexDiv.style.alignItems = "center";
+      // rating button
+      ratingButton.textContent = "Rating";
+      ratingButton.style.alignSelf = "center";
+      ratingButton.style.marginTop = "0.6rem";
+      ratingButton.style.padding = "0.6rem";
+      ratingButton.style.backgroundColor = "blue";
+      ratingButton.style.color = "white";
+      ratingButton.style.cursor = "pointer";
+
       // hidDiv property
       hidDiv.style.display = "none";
       hidDiv.style.marginTop = "0.6rem";
+      hidDiv.style.textAlign = "center";
+      // hidDiv.width = "100%";
       container = document.createElement("div");
-      // main things
-      //main.style.marginTop= "1.2rem";
-      //   var adult = document.createElement("h5");
-      var img = document.createElement("img");
-      var btn = document.createElement("button");
-      var a = document.createElement("a");
       //   container styling
-      //container.style.marginTop="6rem";
       container.style.border = "1px solid white";
       container.style.padding = "1.3rem";
       container.style.margin = "0.6rem";
@@ -69,24 +82,41 @@ var res = fetch(
       btn.style.cursor = "pointer";
       //   <a> things
       a.style.textDecoration = "none";
+      // overview logic
       a.addEventListener("click", () => {
-        hidDiv.textContent = re.overview;
+        hidDiv.innerHTML = "<b>Overview : </b>" + re.overview;
         if (btn.textContent == "Overview") {
           hidDiv.style.display = "block";
           btn.textContent = "Hide";
+          ratingButton.textContent = "Rating";
         } else {
           btn.textContent = "Overview";
           hidDiv.style.display = "none";
         }
         console.log(hidDiv.textContent);
       });
+      // rating logic
+      ratingButton.addEventListener("click", () => {
+        hidDiv.innerHTML = "<b>Rating: </b>" + re.vote_average;
+        if (ratingButton.textContent == "Rating") {
+          hidDiv.style.display = "block";
+          ratingButton.textContent = "Hide";
+          btn.textContent = "Overview";
+        } else {
+          ratingButton.textContent = "Rating";
+          hidDiv.style.display = "none";
+        }
+        console.log(hidDiv.textContent);
+      });
       //a.href=movie_youtube[0];
       a.appendChild(btn);
+      flexDiv.appendChild(a);
+      flexDiv.appendChild(ratingButton);
       container.appendChild(name);
       container.appendChild(release_date);
       //   container.appendChild(adult);
       container.appendChild(img);
-      container.appendChild(a);
+      container.appendChild(flexDiv);
       container.appendChild(hidDiv);
       main[0].appendChild(container);
       console.log(re.title);
