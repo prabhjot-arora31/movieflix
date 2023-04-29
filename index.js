@@ -54,6 +54,7 @@ var res = fetch(
       container.style.margin = "0.6rem";
       container.style.borderRadius = "0.6rem";
       container.style.width = "20em";
+      container.style.boxShadow = "5px 5px 8px #5463FF";
       // container hover things
 
       //   container.style.cursor = "pointer";
