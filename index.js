@@ -1,8 +1,14 @@
 const API_KEY = "fafef439971c0bedf1c12e7a5be971c2";
 
+var movie_youtube=[
+"https://youtu.be/ZlNFpri-Y40",
+"https://youtu.be/TnGl01FkMMo"
+]
+
 const api =
   "https://api.themoviedb.org/3/movie/popular/?api_key=fafef439971c0bedf1c12e7a5be971c2";
 var container;
+
 var res = fetch("https://api.themoviedb.org/3/movie/popular/?api_key=fafef439971c0bedf1c12e7a5be971c2")
   .then((res1) => res1.json())
   .then((data1) => {
@@ -39,7 +45,7 @@ var res = fetch("https://api.themoviedb.org/3/movie/popular/?api_key=fafef439971
       img.alt = "Image of Movies";
       img.style.width = "100%";
       //   button things
-      btn.textContent = "Tap for more info";
+      btn.textContent = "Watch trailer";
       btn.style.alignSelf = "center";
       btn.style.marginTop = "0.6rem";
       btn.style.padding = "0.6rem";
@@ -48,6 +54,7 @@ var res = fetch("https://api.themoviedb.org/3/movie/popular/?api_key=fafef439971
       btn.style.cursor = "pointer";
       //   <a> things
       a.style.textDecoration = "none";
+a.href=movie_youtube[0];
       a.appendChild(btn);
       container.appendChild(name);
       container.appendChild(release_date);
