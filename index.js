@@ -56,7 +56,12 @@ var res = fetch(
       container.style.width = "20em";
       container.style.boxShadow = "5px 5px 8px #5463FF";
       // container hover things
-
+      // container.addEventListener("mouseover", () => {
+      //   container.style.boxShadow = "5px 5px 8px white";
+      // });
+      // container.addEventListener("mouseout", () => {
+      //   container.style.boxShadow = "5px 5px 8px #5463FF";
+      // });
       //   container.style.cursor = "pointer";
       name.innerHTML = re.title + "<br/>";
       release_date.innerHTML = "Release Date: " + re.release_date;
