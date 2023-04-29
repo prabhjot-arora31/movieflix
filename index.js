@@ -23,6 +23,7 @@ var res = fetch("https://api.themoviedb.org/3/movie/popular/?api_key=fafef439971
       var btn = document.createElement("button");
       var a = document.createElement("a");
       //   container styling
+      container.style.marginTop="1.1rem";
       container.style.border = "1px solid white";
       container.style.padding = "1.3rem";
       container.style.margin = "0.6rem";
