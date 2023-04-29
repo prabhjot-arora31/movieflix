@@ -23,6 +23,7 @@ color: red;
 }
 .header{
     display: flex;
+    position: sticky;
     justify-content: space-evenly;
     align-items: center;
 }
