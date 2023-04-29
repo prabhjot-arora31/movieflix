@@ -18,7 +18,7 @@ color: red;
 .main{
     display: flex;
     position: relative;
-    top: 3rem;
+    top: 4.5rem;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
