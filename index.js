@@ -19,7 +19,7 @@ var res = fetch("https://api.themoviedb.org/3/movie/popular/?api_key=fafef439971
       var release_date = document.createElement("h5");
       container = document.createElement("div");
       // main things
-      main.style.marginTop= "1.2rem";
+      //main.style.marginTop= "1.2rem";
       //   var adult = document.createElement("h5");
       var img = document.createElement("img");
       var btn = document.createElement("button");
