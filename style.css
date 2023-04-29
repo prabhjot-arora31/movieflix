@@ -10,7 +10,7 @@ body{
     color: white;
 }
 .movie{
-    color: white;
+    color: black;
 }
 .movie:hover{
 color: blue;
@@ -24,7 +24,7 @@ color: blue;
     align-items: center;
 }
 .header{
-    background-color:red;
+    background-color:white;
     display: flex;
     width:100%;
     z-index:1;
