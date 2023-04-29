@@ -24,6 +24,9 @@ h5{
     font-size: 1.05rem;
     width: 50%;
 }
+button:hover{
+    cursor: pointer;
+}
 h6{
 margin-left:auto;
 margin-right:auto;

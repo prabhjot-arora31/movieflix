@@ -1,15 +1,21 @@
 const API_KEY = "fafef439971c0bedf1c12e7a5be971c2";
 
-var movie_youtube=[
-"https://youtu.be/ZlNFpri-Y40",
-"https://youtu.be/TnGl01FkMMo"
-]
+var movie_youtube = [
+  "https://youtu.be/ZlNFpri-Y40",
+  "https://youtu.be/TnGl01FkMMo",
+];
 
 const api =
   "https://api.themoviedb.org/3/movie/popular/?api_key=fafef439971c0bedf1c12e7a5be971c2";
 var container;
-
-var res = fetch("https://api.themoviedb.org/3/movie/popular/?api_key=fafef439971c0bedf1c12e7a5be971c2")
+// container.onmouseover = () => {
+//   container.style.backgroundColor = "white";
+//   container.style.color = "black";
+// };
+var overview = "Overview";
+var res = fetch(
+  "https://api.themoviedb.org/3/movie/popular/?api_key=fafef439971c0bedf1c12e7a5be971c2"
+)
   .then((res1) => res1.json())
   .then((data1) => {
     var data2 = data1.results;
@@ -17,6 +23,10 @@ var res = fetch("https://api.themoviedb.org/3/movie/popular/?api_key=fafef439971
       var main = document.getElementsByClassName("main");
       var name = document.createElement("h1");
       var release_date = document.createElement("h5");
+      var hidDiv = document.createElement("div");
+      // hidDiv property
+      hidDiv.style.display = "none";
+      hidDiv.style.marginTop = "0.6rem";
       container = document.createElement("div");
       // main things
       //main.style.marginTop= "1.2rem";
@@ -31,6 +41,8 @@ var res = fetch("https://api.themoviedb.org/3/movie/popular/?api_key=fafef439971
       container.style.margin = "0.6rem";
       container.style.borderRadius = "0.6rem";
       container.style.width = "20em";
+      // container hover things
+
       //   container.style.cursor = "pointer";
       name.innerHTML = re.title + "<br/>";
       release_date.innerHTML = "Release Date: " + re.release_date;
@@ -48,7 +60,7 @@ var res = fetch("https://api.themoviedb.org/3/movie/popular/?api_key=fafef439971
       img.alt = "Image of Movies";
       img.style.width = "100%";
       //   button things
-      btn.textContent = "Watch trailer";
+      btn.textContent = overview;
       btn.style.alignSelf = "center";
       btn.style.marginTop = "0.6rem";
       btn.style.padding = "0.6rem";
@@ -57,13 +69,25 @@ var res = fetch("https://api.themoviedb.org/3/movie/popular/?api_key=fafef439971
       btn.style.cursor = "pointer";
       //   <a> things
       a.style.textDecoration = "none";
-//a.href=movie_youtube[0];
+      a.addEventListener("click", () => {
+        hidDiv.textContent = re.overview;
+        if (btn.textContent == "Overview") {
+          hidDiv.style.display = "block";
+          btn.textContent = "Hide";
+        } else {
+          btn.textContent = "Overview";
+          hidDiv.style.display = "none";
+        }
+        console.log(hidDiv.textContent);
+      });
+      //a.href=movie_youtube[0];
       a.appendChild(btn);
       container.appendChild(name);
       container.appendChild(release_date);
       //   container.appendChild(adult);
       container.appendChild(img);
       container.appendChild(a);
+      container.appendChild(hidDiv);
       main[0].appendChild(container);
       console.log(re.title);
     });
