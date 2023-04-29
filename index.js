@@ -54,7 +54,7 @@ var res = fetch("https://api.themoviedb.org/3/movie/popular/?api_key=fafef439971
       btn.style.cursor = "pointer";
       //   <a> things
       a.style.textDecoration = "none";
-a.href=movie_youtube[0];
+//a.href=movie_youtube[0];
       a.appendChild(btn);
       container.appendChild(name);
       container.appendChild(release_date);
