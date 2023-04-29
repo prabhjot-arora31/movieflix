@@ -13,7 +13,7 @@ body{
     color: white;
 }
 .movie:hover{
-color: red;
+color: blue;
 }
 .main{
     display: flex;
