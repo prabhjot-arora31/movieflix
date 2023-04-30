@@ -97,9 +97,10 @@ var res = fetch(
         download_link.href =
           "https://movies.goldmies.workers.dev/b77a3e70a9222929b48151cf94af8512224c1b395d6a6cb15ccd1b190cb657c1fc5ffa80f8d6afcdf797dac1e29c5539::2ebdbcf6ff3cb33e2084388cab946bb2/1395899601/The.Super.Mario.Bros.Movie.2023.1080p.HDCAM.English.1XBET.mkv";
       } else if (re.id == 76600) download.style.display = "block";
-      download_link.href =
-        "https://silent-forest-f312.terapiyo2295250.workers.dev/a12c1bd61fd09df474869ee97a5386bbf7ac3a01f78e52f61b13e502c3d6f7a3e959d7252b4ee146b97be6bd34e4ec3b::175bcabfffc196981854a8cb7093acd1/1395899601/Avatar.The.Way.of.Water.2022.720p.WEB-DL.ENGLISH.x264.ESubs-KatmovieHD.vg.mkv";
-      download.style.alignSelf = "center";
+    //  download_link.href =
+       // "https://silent-forest-f312.terapiyo2295250.workers.dev/a12c1bd61fd09df474869ee97a5386bbf7ac3a01f78e52f61b13e502c3d6f7a3e959d7252b4ee146b97be6bd34e4ec3b::175bcabfffc196981854a8cb7093acd1/1395899601/Avatar.The.Way.of.Water.2022.720p.WEB-DL.ENGLISH.x264.ESubs-KatmovieHD.vg.mkv";
+      download_link.href="https://hubcloud.in/video/om2wlhh_bk2psgs";
+download.style.alignSelf = "center";
       download.style.marginTop = "0.6rem";
       download.style.padding = "0.6rem";
       download.style.backgroundColor = "blue";
